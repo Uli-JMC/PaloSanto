@@ -1,0 +1,23 @@
+:root {
+
+    /* Color palet propieties */
+    --greenStrong: #525945;
+    --greenAntique: #777c6e;
+    --greenMid: #969b86;
+    --greenLight: #cbcec0;
+    --yellowLight: #ccb497;
+    --yellowMid: #b79e80;
+    --SlateLavanda: #7a6d6f;
+    --CoffeToast: #948a7e;
+    --gray: #eeeeee;
+    --black: #0d0d0d;
+
+    /* Fuentes */
+
+    --fuentelinks: "Outfit", sans-serif;
+    --fuenteTitulo: "Playfair Display", serif;
+    --fuenteTextos: "Poppins", sans-serif;
+
+
+
+}
