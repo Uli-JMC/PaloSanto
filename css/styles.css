@@ -1,11 +1,13 @@
 :root {
 
     /* Color palet propieties */
+    --greenDark: #3c4232;
     --greenStrong: #525945;
     --greenAntique: #777c6e;
     --greenMid: #969b86;
     --greenLight: #cbcec0;
-    --yellowLight: #ccb497;
+    --yeloowStrong: #dfb62d;
+    --yellowLight: #cbc3ba;
     --yellowMid: #b79e80;
     --SlateLavanda: #7a6d6f;
     --CoffeToast: #948a7e;
@@ -18,6 +20,242 @@
     --fuenteTitulo: "Playfair Display", serif;
     --fuenteTextos: "Poppins", sans-serif;
 
+}
 
+/*
+* {
+    outline: 1px solid red;
+} Permite evidenciar fallas
+*/
+html {
+    box-sizing: border-box;
+    font-size: 62.6%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Globales */
+
+body {
+    background-color: var(--greenStrong);
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+p {
+    font-family: var(--fuenteTextos);
+    font-size: 1.6rem;
+    color: var(--gray);
+}
+
+a {
+    text-decoration: none;
+    color: var(--greenLight);
+    text-transform: uppercase;
+    font-family: var(--fuentelinks);
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.titulo {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3 {
+    font-family: var(--fuenteTitulo);
+    text-align: justify;
+    color: var(--greenLight);
+}
+
+h1 {
+    font-size: 3.6rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+/** Bloque header **/
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header__logo {
+    margin: 3rem 0;
+}
+
+/** Bloque footer **/
+
+.footer {
+    background-color: var(--greenDark);
+    margin-top: 2rem;
+    padding: 2rem 0;
+}
+
+.footer__texto {
+    color: var(--greenLight);
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/** Bloque Navegacion **/
+
+.navegacion {
+    background-color: var(--greenAntique);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+
+
+
+}
+
+.navegacion__enlace {
+    /*margin-right: 9rem; - Anterior spacing*/
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+}
+
+/* Clase para quitar el ultimo margin
+.navegacion__enlace:last-of-type{
+    margin: 0;
+}
+*/
+.navegacion__enlace:hover {
+    color: var(--yeloowStrong);
+}
+
+.navegacion__enlace--activo {
+    color: var(--greenDark);
+}
+
+/** Contenedor **/
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    /* Agrega seguridad en móviles */
+}
+
+.grid {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/** Bloque footer **/
+
+.producto {
+    box-shadow: 0 4px 12px var(--greenDark);
+    /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--CoffeToast);
+    padding: 1rem;
+
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    /* Eleva ligeramente al pasar el mouse */
+    box-shadow: 0 6px 18px var(--greenDark);
+}
+
+.producto__imagen {
+    width: 100%;
+    transition: filter 0.3s ease;
+}
+
+.producto__imagen:hover {
+  filter: brightness(0.7); /* oscurece la imagen al 70% */
+}
+
+.producto__informacion {}
+
+.producto__informacion hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 0.5rem 0;
+}
+
+.producto__informacion--nombre {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    color: var(--yellowLight);
+    letter-spacing: 0.1rem;
+}
+
+.producto__informacion--precio {
+    font-family: var(--fuentelinks);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 0;
+
+}
+
+/* Imagenes Relleno*/
+.grafico {
+    min-height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / 3;
+
+}
+
+.grafico--1 {
+    grid-row: 2 / 3;
+    background-image: url(/Img/grafico1.jpg);
+
+
+}
+
+.grafico--2 {
+    background-image: url(/Img/grafico2.jpg);
+    grid-row: 8 / 9;
+
+
+}
+
+@media (min-width: 768px) {
+    .grafico--2 {
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
 
 }
