@@ -62,16 +62,24 @@ a {
 
 img {
     max-width: 100%;
-}
-
-.contenedor {
-    max-width: 120rem;
-    margin: 0 auto;
+    height: auto;
+    display: block;
 }
 
 .titulo {
     text-align: center;
     margin: 2rem 0;
+
+}
+
+.titulo__sub {
+    text-align: center;
+    margin: 1rem 0;
+    color: var(--SlateLavanda);
+}
+
+.color__nosotros {
+    background-color: var(--gray);
 }
 
 /* Headings */
@@ -103,8 +111,18 @@ h3 {
     justify-content: center;
 }
 
+.header--nosotros {
+    background-color: var(--greenStrong)
+}
+
 .header__logo {
     margin: 3rem 0;
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+}
+
+.header__logo:hover {
+    transform: scale(1.03);
 }
 
 /** Bloque footer **/
@@ -130,14 +148,16 @@ h3 {
     justify-content: center;
     gap: 6rem;
 
-
-
 }
 
 .navegacion__enlace {
     /*margin-right: 9rem; - Anterior spacing*/
     font-size: 1.5rem;
     letter-spacing: 0.2rem;
+}
+
+.navegacion__enlace {
+    transition: color 0.3s ease;
 }
 
 /* Clase para quitar el ultimo margin
@@ -179,13 +199,13 @@ h3 {
 /** Bloque footer **/
 
 .producto {
-    box-shadow: 0 4px 12px var(--greenDark);
-    /* Sombra suave */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: var(--CoffeToast);
-    padding: 1rem;
-
+    padding: 1.5rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .producto:hover {
     transform: translateY(-5px);
@@ -199,10 +219,9 @@ h3 {
 }
 
 .producto__imagen:hover {
-  filter: brightness(0.7); /* oscurece la imagen al 70% */
+    filter: brightness(0.7);
+    /* oscurece la imagen al 70% */
 }
-
-.producto__informacion {}
 
 .producto__informacion hr {
     border: none;
@@ -257,5 +276,35 @@ h3 {
         grid-row: 5 / 6;
         grid-column: 2 / 4;
     }
+}
 
+/* Nosotros seccion */
+
+.contenido__nosotros {
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+}
+
+
+@media (min-width: 768px) {
+    .contenido__nosotros {
+        grid-template-columns: 38% 60%;
+    }
+}
+
+.contenido__nosotros--parrafo1,
+.contenido__nosotros--parrafo2 {
+    font-size: 1.3rem;
+    color: var(--SlateLavanda);
+    text-align: justify;
+    margin: 0 auto;
+}
+
+.contenido__nosotros--imagen1,
+.contenido__nosotros--imagen2 {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.2rem;
 }
