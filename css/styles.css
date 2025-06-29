@@ -6,6 +6,8 @@
     --greenAntique: #777c6e;
     --greenMid: #969b86;
     --greenLight: #cbcec0;
+    --yellowStrong: #dfb62d;
+    --yellowBoton: #806b00;
     --yeloowStrong: #dfb62d;
     --yellowLight: #cbc3ba;
     --yellowMid: #b79e80;
@@ -136,7 +138,8 @@ hr {
 .footer {
     background-color: var(--greenDark);
     margin-top: 2rem;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
+
 }
 
 .footer__texto {
@@ -172,7 +175,7 @@ hr {
 }
 */
 .navegacion__enlace:hover {
-    color: var(--yeloowStrong);
+    color: var(--yellowStrong);
 }
 
 .navegacion__enlace--activo {
@@ -301,10 +304,19 @@ hr {
 .contenido__nosotros--parrafo1,
 .contenido__nosotros--parrafo2 {
     font-size: 1.3rem;
+    padding: 0 1rem;
     margin: 0;
     color: var(--SlateLavanda);
     text-align: justify;
     width: 100%;
+}
+
+@media (min-width: 768px) {
+    .contenido__nosotros--parrafo1,
+    .contenido__nosotros--parrafo2 {
+        padding: 0;
+    }
+  
 }
 
 .contenido__nosotros--imagen1,
@@ -328,7 +340,6 @@ hr {
     .formulario {
         padding: 2rem 5rem;
     }
-
 }
 
 @media (min-width: 768px) {
@@ -357,6 +368,20 @@ hr {
     font-size: 1.48rem;
 }
 
+input:disabled,
+button:disabled {
+    background-color: var(--gray);
+    color: var(--SlateLavanda);
+    cursor: not-allowed;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--greenMid);
+    box-shadow: 0 0 5px var(--greenLight);
+}
+
 .campo {
     font-family: var(--fuentelinks);
     font-size: 1.8rem;
@@ -371,7 +396,8 @@ hr {
 
 .campo label {
     color: var(--greenStrong);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
 @media (min-width: 768px) {
@@ -383,9 +409,16 @@ hr {
     }
 }
 
+.boton__form:hover {
+    background-color: var(--yellowStrong);
+    color: var(--greenStrong);
+}
+
 .boton__form {
-    padding: 0.8rem 2rem;
     font-size: 1.6rem;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
     font-weight: 700;
     border-radius: 0.5rem;
     border: none;
@@ -393,8 +426,15 @@ hr {
     background-color: var(--greenDark);
     color: var(--gray);
     cursor: pointer;
-    transition: background-color var(--greenStrong) 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
+@media (min-width: 768px) {
+    .boton__form {
+        width: 12rem;
+        margin: 0;
+
+    }
 }
 
 .leyenda {
