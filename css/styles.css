@@ -462,18 +462,10 @@ fieldset {
 
 .iconos {
     background-color: var(--greenMid);
-    padding: 0 8rem 1rem 8rem;
+    padding: 2rem 8rem 1rem 8rem;
     margin-top: 2rem;
 
 }
-
-.iconos__titulo {
-    color: var(--gray);
-    margin: 0;
-    padding: 2rem;
-    text-align: center;
-}
-
 .bloques {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
