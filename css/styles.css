@@ -8,7 +8,6 @@
     --greenLight: #cbcec0;
     --yellowStrong: #dfb62d;
     --yellowBoton: #806b00;
-    --yeloowStrong: #dfb62d;
     --yellowLight: #cbc3ba;
     --yellowMid: #b79e80;
     --SlateLavanda: #7a6d6f;
@@ -124,10 +123,11 @@ hr {
 }
 
 .header--nosotros {
-    background-color: var(--greenStrong)
+    background-color: var(--greenStrong);
 }
 
 .header__logo {
+    width: 18rem;
     margin: 3rem 0;
     transition: transform 0.3s ease;
     transform-origin: center center;
@@ -208,6 +208,60 @@ hr {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/** Clases botones **/
+
+.btn {
+    display: flex;
+    justify-content: end;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1rem 0;
+    border: none;
+    font-family: var(--fuentelinks);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn__form,
+.btn__form--shop {
+    width: 100%;
+    padding: 0.8rem;
+    color: var(--gray);
+    border-radius: 0.5rem;
+    font-family: var(--fuentelinks);
+    display: flex;
+    justify-content: center;
+}
+
+.btn__form {
+    background-color: var(--greenDark);
+}
+
+.btn__form--shop {
+    background-color: var(--yellowBoton);
+}
+
+
+@media (min-width: 768px) {
+    .btn__form {
+        width: 12rem;
+        margin: 0;
+    }
+
+    .btn__form--shop {
+        width: 18rem;
+        margin: 0;
+    }
+}
+
+.btn__form:hover,
+.btn__form--shop:hover {
+    background-color: var(--yellowStrong);
+    color: var(--greenStrong);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
 
 /** Bloque footer **/
 
@@ -419,29 +473,6 @@ textarea:focus {
     color: var(--greenStrong);
 }
 
-.boton__form {
-    font-size: 1.6rem;
-    width: 100%;
-    margin-top: 1rem;
-    padding: 0.8rem 2rem;
-    font-weight: 700;
-    border-radius: 0.5rem;
-    border: none;
-    font-family: var(--fuentelinks);
-    background-color: var(--greenDark);
-    color: var(--gray);
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-@media (min-width: 768px) {
-    .boton__form {
-        width: 12rem;
-        margin: 0;
-
-    }
-}
-
 .leyenda {
     font-family: var(--fuenteTextos);
     font-size: 1.8rem;
@@ -466,18 +497,20 @@ fieldset {
     margin-top: 2rem;
 
 }
+
 .bloques {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     text-align: center;
-    
-
-
 }
+
 .bloque {
 
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .bloque__titulo {
@@ -495,11 +528,94 @@ fieldset {
     margin-top: 0rem;
 }
 
-.bloque__imagen{ 
+.bloque__imagen {
     max-width: 80px;
     height: auto;
     display: block;
     margin: 0 auto;
-
 }
 
+/** Página Producto **/
+
+.galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    column-gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.galeria__imagen {
+    order: 1;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.galeria__miniaturas {
+    order: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.galeria__contenido {
+    order: 3;
+}
+
+@media (min-width: 768px) {
+    .galeria {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto auto;
+        column-gap: 2rem;
+    }
+
+    .galeria__imagen {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        max-height: 500px;
+    }
+
+    .galeria__miniaturas {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .galeria__contenido {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        align-self: start;
+    }
+}
+
+.galeria__contenido p {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 200;
+    color: var(--greenLight);
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+
+.galeria__contenido p span {
+    font-weight: 500;
+    color: var(--gray);
+}
+
+.categoria {
+    border-color: var(--greenAntique);
+}
+
+.categoria__campo {
+    /** 
+    border-width: 1rem;
+    border-style: solid; 
+    **/
+    font-family: var(--fuentelinks);
+    text-align: center;
+    color: var(--greenDark);
+    margin-bottom: 2rem;
+    border: 0.5rem solid var(--greenAntique);
+    background-color: var(--greenLight);
+    padding: 0.5rem;
+}

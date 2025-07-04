@@ -25,18 +25,51 @@
     </header>
 
     <nav class="navegacion">
-        <a class="navegacion__enlace"  href="/nosotros.html">Nosotros</a>
+        <a class="navegacion__enlace" href="/nosotros.html">Nosotros</a>
         <a class="navegacion__enlace" href="/index.html">Tienda</a>
         <a class="navegacion__enlace navegacion__enlace--activo" href="/estilos.html">Estilos</a>
     </nav>
     <main class="contenedor">
         <h1 class="titulo">Galería de estilo</h1>
 
-
-
+        <div class="galeria">
+            <!-- Imagen producto -->
+            <img class="galeria__imagen" src="/Img/5.jpg" alt="Imagen del producto Ricota Lift" id="imagen-principal">
+            <div class="galeria__miniaturas">
+                <img src="/Img/5a.jpg" alt="imagen de producto mino" class="galeria__mini"
+                    onclick="cambiarImagen(this)">
+                <img src="/Img/5b.jpg" alt="imagen de producto mino" class="galeria__mini"
+                    onclick="cambiarImagen(this)">
+            </div>
+            <!-- Contenido del producto -->
+            <div class="galeria__contenido">
+                <h3>Ricota Lift</h3>
+                <p>
+                    <span>Descripción:</span> Esta silla ejecutiva combina elegancia clásica y confort en un diseño que
+                    impone presencia. Su respaldo capitoné en cuero sintético y estructura en madera la hacen ideal
+                    para espacios profesionales que valoran el estilo y la funcionalidad. Ofrece soporte ergonómico
+                    y una experiencia de uso cómoda durante largas jornadas. Una pieza pensada para quienes trabajan
+                    con distinción.
+                </p>
+                <form class="categoria" action="#">
+                    <select class="categoria__campo" name="Seleccion de colores" id="categoria" required>
+                        <option value="" disabled selected>Selecciona el color</option>
+                        <option value="Rojo wood">Rojo wood</option>
+                        <option value="Azul terraquea">Azul terraquea</option>
+                        <option value="Lila plant">Lila plant</option>
+                        <option value="Marron terra">Marron terra</option>
+                        <option value="Rojo clair">Rojo clair</option>
+                    </select>
+                    <input class="categoria__campo" id="cantidad" type="number" placeholder="Cantidad" min="1" required>
+                    <input class="btn btn__form--shop" type="submit" value="Agregar al Carrito">
+                </form>
+            </div>
+        </div>
     </main>
+
     <footer class="footer">
-        <p class="footer__texto">PaloSanto Furniture Design, hecho en Costa Rica por MoodSpacecr. Copyright © 2025. All rights reserved.</p>
+        <p class="footer__texto">PaloSanto Furniture Design, hecho en Costa Rica por MoodSpacecr. Copyright © 2025. All
+            rights reserved.</p>
     </footer>
 
 </body>
