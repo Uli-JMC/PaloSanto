@@ -25,8 +25,8 @@
     </header>
 
     <nav class="navegacion">
-        <a class="navegacion__enlace" href="/nosotros.html">Nosotros</a>
         <a class="navegacion__enlace" href="/index.html">Tienda</a>
+        <a class="navegacion__enlace" href="/nosotros.html">Nosotros</a>
         <a class="navegacion__enlace navegacion__enlace--activo" href="/estilos.html">Estilos</a>
     </nav>
     <main class="contenedor">
@@ -51,20 +51,29 @@
                     y una experiencia de uso cómoda durante largas jornadas. Una pieza pensada para quienes trabajan
                     con distinción.
                 </p>
+
+                <p>
+                    Los acabados de esta silla reflejan un alto nivel de detalle y calidad. El cuero sintético aporta
+                    una textura elegante y fácil de mantener, mientras que las costuras reforzadas aseguran durabilidad
+                    y un acabado impecable.
+                </p>
                 <form class="categoria" action="#">
-                    <select class="categoria__campo" name="Seleccion de colores" id="categoria" required>
-                        <option value="" disabled selected>Selecciona el color</option>
-                        <option value="Rojo wood">Rojo wood</option>
-                        <option value="Azul terraquea">Azul terraquea</option>
-                        <option value="Lila plant">Lila plant</option>
-                        <option value="Marron terra">Marron terra</option>
-                        <option value="Rojo clair">Rojo clair</option>
-                    </select>
-                    <input class="categoria__campo" id="cantidad" type="number" placeholder="Cantidad" min="1" required>
-                    <input class="btn btn__form--shop" type="submit" value="Agregar al Carrito">
+                    <div class="categoria__grupo">
+                        <select class="categoria__campo" name="Seleccion de colores" id="categoria" required>
+                            <option value="" disabled selected>Selecciona el color</option>
+                            <option value="Rojo wood">Rojo wood</option>
+                            <option value="Azul terraquea">Azul terraquea</option>
+                            <option value="Lila plant">Lila plant</option>
+                            <option value="Marron terra">Marron terra</option>
+                            <option value="Rojo clair">Rojo clair</option>
+                        </select>
+                        <input class="categoria__campo" id="cantidad" type="number" placeholder="Cantidad" min="1"
+                            required>
+                        <input class=" btn btn__form--shop type=" submit" value="Agregar al carrito"></button>
+                    </div>
+
                 </form>
             </div>
-        </div>
     </main>
 
     <footer class="footer">

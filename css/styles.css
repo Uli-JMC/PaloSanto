@@ -95,7 +95,7 @@ h3 {
 }
 
 h1 {
-    font-size: 3.6rem;
+    font-size: 3.3rem;
 }
 
 h2 {
@@ -159,7 +159,7 @@ hr {
     padding: 1rem 0;
     display: flex;
     justify-content: center;
-    gap: 6rem;
+    gap: 5rem;
 
 }
 
@@ -232,6 +232,7 @@ hr {
     font-family: var(--fuentelinks);
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .btn__form {
@@ -260,7 +261,7 @@ hr {
     background-color: var(--yellowStrong);
     color: var(--greenStrong);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-}
+} 
 
 
 /** Bloque footer **/
@@ -546,6 +547,7 @@ fieldset {
 }
 
 .galeria__imagen {
+    border: 0.5rem solid var(--greenLight);
     order: 1;
     width: 100%;
     height: auto;
@@ -553,27 +555,36 @@ fieldset {
 }
 
 .galeria__miniaturas {
+    background-color: var(--greenLight);
+    border: 0.5rem solid var(--greenLight);
     order: 2;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .galeria__contenido {
     order: 3;
 }
 
+.galeria__contenido h3 {
+    color: var(--gray);
+    margin: 0;
+}
+
+
 @media (min-width: 768px) {
     .galeria {
         grid-template-columns: 1fr 2fr;
         grid-template-rows: auto auto;
-        column-gap: 2rem;
+        column-gap: 3rem;
+        margin-bottom: 4rem;
     }
 
     .galeria__imagen {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
-        max-height: 500px;
+
     }
 
     .galeria__miniaturas {
@@ -587,11 +598,10 @@ fieldset {
         align-self: start;
     }
 }
-
 .galeria__contenido p {
-    font-size: 1.3rem;
-    line-height: 2rem;
-    font-weight: 200;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    font-weight: 100;
     color: var(--greenLight);
     text-align: justify;
     margin-bottom: 2rem;
@@ -606,16 +616,23 @@ fieldset {
     border-color: var(--greenAntique);
 }
 
+
 .categoria__campo {
     /** 
     border-width: 1rem;
     border-style: solid; 
     **/
+    flex: 1;
     font-family: var(--fuentelinks);
+    font-size: 1.2rem;
     text-align: center;
-    color: var(--greenDark);
-    margin-bottom: 2rem;
-    border: 0.5rem solid var(--greenAntique);
-    background-color: var(--greenLight);
+    color: var(--gray);
+    border: 0.3rem solid var(--greenLight);
+    background-color: transparent;
     padding: 0.5rem;
+    border-radius: 0.5rem;
+    min-width: 0; /* Previene overflow */
+    box-sizing: border-box;
+    margin: 0 0.2rem;
+    margin-bottom: 2rem;
 }
